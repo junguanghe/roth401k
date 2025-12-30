@@ -225,8 +225,16 @@ class IRAComparisonApp:
         self.comparison_label = ttk.Label(comparison_frame, text="", font=("Arial", 11))
         self.comparison_label.grid(row=0, column=0, sticky=tk.W, pady=2)
 
+        # Break-even formula label
+        self.break_even_formula_label = ttk.Label(
+            comparison_frame,
+            text="Break-even formula: t_fut = t_cur × [1 - t_cg × (1 - 1/G)]",
+            font=("Arial", 9),
+        )
+        self.break_even_formula_label.grid(row=1, column=0, sticky=tk.W, pady=2)
+
         self.break_even_label = ttk.Label(comparison_frame, text="", font=("Arial", 10))
-        self.break_even_label.grid(row=1, column=0, sticky=tk.W, pady=2)
+        self.break_even_label.grid(row=2, column=0, sticky=tk.W, pady=2)
 
         # Configure grid weights
         self.root.columnconfigure(0, weight=1)
